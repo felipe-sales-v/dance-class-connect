@@ -14,7 +14,7 @@ export function EventCard({ event }: { event: DanceEvent }) {
           className={`grid size-12 place-items-center rounded-xl text-center font-display leading-none outline outline-1 -outline-offset-1 ${toneClasses[event.tone]!}`}
         >
           <span className="text-[10px] uppercase">
-            {MONTH_NAMES[event.month].slice(0, 3)}
+            {MONTH_NAMES[event.month]!.slice(0, 3)}
           </span>
           <span className="text-lg">{String(event.day).padStart(2, "0")}</span>
         </span>
