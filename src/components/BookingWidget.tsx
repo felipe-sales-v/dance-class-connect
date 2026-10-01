@@ -29,7 +29,7 @@ export function BookingWidget() {
     while (!hasClassOnDate(d)) d.setDate(d.getDate() + 1);
     return d;
   });
-  const [classId, setClassId] = useState(CLASSES[0].id);
+  const [classId, setClassId] = useState(CLASSES[0]!.id);
   const [time, setTime] = useState<string | null>(null);
   const [step, setStep] = useState<"pick" | "form" | "done">("pick");
   const [name, setName] = useState("");
@@ -53,7 +53,7 @@ export function BookingWidget() {
     cursor.getFullYear() > today.getFullYear() ||
     cursor.getMonth() > today.getMonth();
 
-  const selectedLabel = `${WEEKDAY_SHORT[selected.getDay()]} · ${selected.getDate()} ${MONTH_NAMES[selected.getMonth()].slice(0, 3).toLowerCase()}`;
+  const selectedLabel = `${WEEKDAY_SHORT[selected.getDay()]!} · ${selected.getDate()} ${MONTH_NAMES[selected.getMonth()]!.slice(0, 3).toLowerCase()}`;
 
   return (
     <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">

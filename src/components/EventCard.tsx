@@ -11,7 +11,7 @@ export function EventCard({ event }: { event: DanceEvent }) {
     <div className="glass-card group rounded-2xl p-6 transition hover:bg-glass-strong">
       <div className="flex items-center gap-3">
         <span
-          className={`grid size-12 place-items-center rounded-xl text-center font-display leading-none outline outline-1 -outline-offset-1 ${toneClasses[event.tone]}`}
+          className={`grid size-12 place-items-center rounded-xl text-center font-display leading-none outline outline-1 -outline-offset-1 ${toneClasses[event.tone]!}`}
         >
           <span className="text-[10px] uppercase">
             {MONTH_NAMES[event.month].slice(0, 3)}
