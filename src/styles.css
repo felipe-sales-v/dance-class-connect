@@ -102,6 +102,15 @@
   }
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @utility glass-card {
   background-color: var(--color-glass);
   outline: 1px solid var(--color-glass-border);
